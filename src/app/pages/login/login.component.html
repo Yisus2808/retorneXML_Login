@@ -1,0 +1,24 @@
+<!-- LOGIN -->
+<div class="fondo">
+    <div class="middle animate">
+        <form (ngSubmit)="login( f )" #f="ngForm" novalidate class="content">
+          <a [routerLink]="['login']"><img src="../../../assets/img/image003.png" alt="icono"></a>
+          <div class="box box1">
+              <i class="fas fa-user prefix"></i>
+              <input type="email" name="email" [(ngModel)]="usuario.email" #email="ngModel" id="email" required minlength="2" maxlength="25" placeholder="Correo">
+          </div>
+          <div class="box">
+              <i Class="fas fa-lock prefix"></i>
+              <input [type]="passType" name="password" id="passwoord" [(ngModel)]="usuario.password" #password="ngModel" required minlength="5" maxlength="12" placeholder="Contraseña">
+
+              <span style="width: 10px; color: white;">
+                  <i [ngClass]="{'far fa-eye': passShow, 'fas fa-eye-slash': !passShow }" (click)="mostrarContrasena()"></i>
+              </span>
+
+          </div>
+
+          <button type="submit" class="btn btn1">Login</button>
+          <a [routerLink]="['/register']"><p>¿No tienes cuenta?</p></a>
+        </form>
+      </div>
+</div>

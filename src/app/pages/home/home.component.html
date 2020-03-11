@@ -1,0 +1,49 @@
+<button class="btn btn-danger">
+    <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" (click)="salir()">Salir</a>
+    </li>
+</button>
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Obtención de xml y convertir a json</h1>
+    <p class="lead">Se obtienen los datos de 'https://randomuser.me/'.</p>
+    <hr class="my-4">
+    <p>Obtendremos los resultados, mostrando por sexo...</p>
+    <a class="btn btn-primary btn-lg" (click)="Obtener()" role="button">Obtener resultado</a>
+</div>
+
+
+<h1>Mujeres</h1>
+<div class="card-columns">
+    <div class="card" *ngFor="let user of users; index as i;">
+        <ng-template [ngIf]="user.gender == 'female' ">
+            <img class="card-img-top" [src]="user.picture.medium" height="220" width="250">
+            <div class="card-body">
+                <h5 class="card-title">{{ user.name.first | uppercase }}</h5>
+                <p class="card-text">{{ user.email }}</p>
+                <p>{{ i+1 }}</p>
+            </div>
+        </ng-template>
+    </div>
+</div>
+
+
+<h1>Hombres</h1>
+<div class="card-columns">
+    <div class="card" *ngFor="let user of users; index as i">
+        <ng-template [ngIf]="user.gender == 'male' ">
+            <img class="card-img-top" [src]="user.picture.medium" height="220" width="250">
+            <div class="card-body">
+                <h5 class="card-title">{{ user.name.first | uppercase }}</h5>
+                <p class="card-text">{{ user.email }}</p>
+                <p>{{ i+1 }}</p>
+            </div>
+        </ng-template>
+    </div>
+</div>
+
+<h4>JSON</h4>
+    <pre>
+      {{ users | json }}
+    </pre>

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .middle{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .content{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(49, 5, 224, 0.5);
+  }
+  
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    box-shadow: 0px 0px 10px 5px rgba(49, 5, 224, 0.5)
+  }
+  
+  .box{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0px;
+    margin: 8px 0px;
+    border-bottom: 1px solid #0000ff;
+    color: white;
+    margin: auto;
+  }
+  
+  .box i{
+    width: 10px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .box input {
+    outline: none;
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .box input:hover {
+    outline: none;
+    background: none;
+    color: white;
+  }
+  
+  input[type=email],input[type=password]{
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  input[type=email]:hover,input[type=password]:hover{
+    border: 2px solid white;
+    padding: 12px 5px;
+    margin: 5px auto;
+    border-radius: 6px;
+    width: 80%;
+  }
+  
+  .box1{
+    margin-top: 100px;
+  }
+  
+  .btn {
+    position: relative;
+    font-size: 20px;
+    border: 2px solid #0000ff;
+    background: none;
+    padding: 14px 60px;
+    overflow: hidden;
+    transition: 1s all ease;
+    width: 100%;
+    color: white;
+    margin: 20px 0px;
+  }
+  
+  .btn::before {
+    background: rgba(49, 5, 224, 0.5);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6% ease;
+  }
+  
+  .btn1::before{
+    width: 100%;
+    height: 0px;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  
+  .btn1:hover::before{
+    height: 800%;
+  }
+  
+  .animate {
+    animation: tran 1.5s;
+  }
+  @keyframes tran {
+    from{
+      opacity: 0;
+    }
+    top{
+      opacity: 1;
+    }
+  }
+
+  p{
+    color: white;
+  }
+  
